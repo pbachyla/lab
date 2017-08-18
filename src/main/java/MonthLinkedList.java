@@ -204,7 +204,7 @@ public class MonthLinkedList {
 
     // Node --------------------------------------------------------------------------------------
 
-    private static class Node/* implements MonthEnumComparable, MonthFormatComparable*/ {
+    private static class Node {
         private String value;
         private Node next;
         private Node prev;
@@ -221,16 +221,6 @@ public class MonthLinkedList {
         public int hashCode() {
             return Objects.hash(value);
         }
-/*
-        @Override
-        public int compare(String m1, String m2) {
-            return Integer.compare(Month.valueOf(m1.toUpperCase()).ordinal(),
-                    Month.valueOf(m2.toUpperCase()).ordinal());
-        }
 
-        @Override
-        public int compareMonths(String m1, String m2){
-            return format(m1).compareTo(format(m2));
-        }*/
     }
 }

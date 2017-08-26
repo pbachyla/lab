@@ -32,7 +32,7 @@ public class DeadLockTask {
   }
 
 
-  public static void main(String[] args) { //add throws InterruptedException
+  public static void main(String[] args) { //option 2: add throws InterruptedException
 
     Runnable acs = new DeadLockThreadASC();
     Runnable desc = new DeadLockThreadDESC();

@@ -13,11 +13,9 @@ public class DeadLockTask {
         // option 3: lock1.wait();
       } catch (InterruptedException e) {}
       synchronized (lock2){
-        System.out.println("L1->>L2");
         //option 4: lock2.notify();
       }
     }
-    System.out.println(Thread.currentThread().getId() + " F1");
   }
 
   private static void f2() {  // option 1: add synchronized
@@ -46,7 +44,6 @@ public class DeadLockTask {
     t1.start();
     //option 2: insert t1.join();
     t2.start();
-    System.out.println("OK");
   }
 
   static class DeadLockThreadASC implements Runnable{
@@ -67,6 +64,6 @@ public class DeadLockTask {
     }
   }
 
-  
+
 }
 
